@@ -1,0 +1,72 @@
+<div class="absolute z-50 w-3 h-3 bg-[#00000050] border rounded-full pointer-events-none" id="_pointerTexture"></div>
+<div class="absolute -z-10" id="_cursorFollows">
+    <div class="w-96 h-96 _green-box absolute bg-[#56B29134]"></div>
+    <div class="w-72 h-72 _brown-box absolute bg-[#5D3A2B58]"></div>
+</div>
+
+<style>
+	#_pointerTexture {
+		backdrop-filter: blur(10px);
+		transition: none;
+	}
+	#_cursorFollows {
+		filter: blur(50px);
+		transition: transform 700ms ease-out;
+	}
+	._green-box {
+		border-radius: 34% 66% 70% 30% / 30% 37% 63% 70%;
+		animation:
+			green-box-rounded 10s linear infinite alternate-reverse,
+			green-box-rotation 20s linear infinite alternate-reverse;
+	}
+
+	._brown-box {
+		transform: translate(100%, 100px);
+		border-radius: 6% 94% 49% 51% / 59% 21% 79% 41%;
+		animation:
+			brown-box-rounded 15s linear infinite alternate-reverse,
+			brown-box-rotation 20s linear infinite alternate-reverse;
+	}
+
+	@keyframes green-box-rounded {
+		0% {
+			border-radius: 34% 66% 70% 30% / 30% 37% 63% 70%;
+		}
+		50% {
+			border-radius: 87% 13% / 59% 21% 79% 41%;
+		}
+		100% {
+			border-radius: 11% 89% 18% 82% / 79% 78% 22% 21%;
+		}
+	}
+
+	@keyframes green-box-rotation {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes brown-box-rounded {
+		0% {
+			border-radius: 6% 94% 49% 51% / 59% 21% 79% 41%;
+		}
+		50% {
+			border-radius: 89% 11% 15% 85% / 6% 21% 79% 94%;
+		}
+		100% {
+			border-radius: 5% 95% 5% 95% / 95% 90% 10% 5%;
+		}
+	}
+
+	@keyframes brown-box-rotation {
+		0% {
+			transform: rotate(360deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+</style>

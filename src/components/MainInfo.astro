@@ -1,6 +1,33 @@
 ---
+import RubikCubeIcon from "./RubikCubeIcon.astro";
 ---
 
 <div>
-    <h1>FRONTEND DEV. UX/UI HOBBYIST FUTURE FULLSTACK</h1>
+    <RubikCubeIcon />
 </div>
+<div>
+    <h1
+        class="font-black text-[9.5vw] leading-none  max-w-screen flex flex-col h-screen  justify-center pointer-events-none"
+    >
+        <div class="flex flex-col">
+            <span>
+                <span>FRONTEND</span>
+                <span class="text-black/30 _text-stroke">DEV.</span>
+            </span>
+            <span>
+                <span>UX/UI</span>
+                <span class="text-black/30 _text-stroke">HOBBYIST</span>
+            </span>
+            <span>
+                <span class="text-black/30 _text-stroke">FUTURE</span>
+                <span>FULLSTACK</span>
+            </span>
+        </div>
+    </h1>
+</div>
+
+<style>
+    ._text-stroke {
+        -webkit-text-stroke: 1px #747474;
+    }
+</style>
