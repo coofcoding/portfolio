@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.3.5)(tailwindcss@3.4.1)
+  '@fontsource-variable/dancing-script':
+    specifier: ^5.0.16
+    version: 5.0.16
   '@fontsource/lato':
     specifier: ^5.0.18
     version: 5.0.18
@@ -532,6 +535,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/dancing-script@5.0.16:
+    resolution: {integrity: sha512-NrjPyK6uGT2cAfgY4onzqbFeLqNOU9sBRhoAg8CYn+h3ENKTigWF8cyOUQQ5t5U5q7/NYOkWzNtTL/UdWFP9kw==}
+    dev: false
 
   /@fontsource/lato@5.0.18:
     resolution: {integrity: sha512-lJa0f4MPXtHsZsLz37wo7d4m5odfOdwCNRg0IjV06ri/fIPypJLEuUB12oWCJ38DDD/XhKVSQPo8BWV8CRBhzQ==}
