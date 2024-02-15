@@ -1,27 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import MainInfo from "../components/MainInfo.astro";
-import Cursor from "../ui/Cursor.astro";
 import LoadingScreen from "../components/LoadingScreen.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<script>
-	const showMainContent = () => {
-		document.getElementById("loading").style.display = "none";
-		document.getElementById("main-content").style.display = "block";
-	};
-
-	setTimeout(showMainContent, 2000); // Timeout de 2 segundos
-</script>
-
-
-<script src="../scripts/cursor-follower.js"></script>
-<Layout title="Kevin Lopez">
-	<div class="h-screen" id="loading">
-		<LoadingScreen/>
-	</div>
-	<Cursor />
-	<main class="text-white h-screen ml-5"id="main-content" style="display: none;">
-		<MainInfo/>
-	</main>
+<Layout title="loading... 🤖">
+	<LoadingScreen />
 </Layout>
