@@ -1,14 +1,24 @@
 ---
 import RubikCubeIcon from "./RubikCubeIcon.astro";
+import DownArrow from "../../public/DownArrow.astro";
 ---
 
 <div>
     <RubikCubeIcon />
 </div>
+<span
+    class="absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] text-base font-bold text-white/80 flex items-center gap-2 _scroll-txt-animation"
+>
+    <DownArrow/>
+    scroll and discover
+</span>
 <div>
-    <span class="_background-txt">Developer</span>
-    <h1 transition:name="media-player"
-        class="font-black text-[9.5vw] leading-none max-w-screen flex flex-col h-screen justify-center pointer-events-none"
+    <span
+        class="text-end -translate-x-10 leading-[100%] -z-[1] text-[#00000060] mix-blend-darken uppercase absolute flex items-center justify-end font-black text-[30vw] h-full break-all w-full"
+        >Developer</span
+    >
+    <h1
+        class="font-black text-[9.5vw] leading-none max-w-screen flex flex-col h-screen justify-center pointer-events-none _main-content"
     >
         <div class="flex flex-col">
             <span>
@@ -31,22 +41,46 @@ import RubikCubeIcon from "./RubikCubeIcon.astro";
     ._text-stroke {
         -webkit-text-stroke: 1px #747474;
     }
-    ._background-txt {
-        height: 100vh;
-        mix-blend-mode: darken;
-        text-transform: uppercase;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        font-weight: 900;
-        font-size: 30vw;
-        word-break: break-all;
-        width: 100vw;
-        text-align: end;
-        transform: translateX(-40px);
-        line-height: 100%;
-        z-index: -1;
-        color: #00000050;
+
+    ._scroll-txt-animation {
+        animation:
+            scrollAnimate 3s 2s ease-in-out both,
+            scrollAnimteHide 1s 8s ease-in-out forwards;
+    }
+
+    ._main-content {
+        animation: loadingAnimate 3s ease-in-out;
+    }
+
+    @keyframes scrollAnimteHide {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes scrollAnimate {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes loadingAnimate {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 </style>

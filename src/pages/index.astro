@@ -1,8 +1,13 @@
 ---
-import LoadingScreen from "../components/LoadingScreen.astro";
+import MainInfo from "../components/MainInfo.astro";
 import Layout from "../layouts/Layout.astro";
+import Cursor from "../ui/Cursor.astro";
 ---
 
-<Layout title="loading... 🤖">
-	<LoadingScreen />
+<script src="../scripts/cursor-follower.js"></script>
+<Layout title="Kevin Lopez">
+	<Cursor />
+    <main class="text-white h-screen ml-5">
+        <MainInfo/>
+    </main>
 </Layout>
