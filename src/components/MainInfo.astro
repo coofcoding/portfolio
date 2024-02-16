@@ -7,7 +7,7 @@ import DownArrow from "../../public/DownArrow.astro";
     <RubikCubeIcon />
 </div>
 <span
-    class="absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] text-base font-bold text-white/80 flex items-center gap-2 _scroll-txt-animation"
+    class="absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] text-base font-bold text-white/80 flex items-center gap-2 _scroll-txt-animation pointer-events-none"
 >
     <DownArrow/>
     scroll and discover
@@ -58,6 +58,7 @@ import DownArrow from "../../public/DownArrow.astro";
         }
         to {
             opacity: 0;
+            display: none;
         }
     }
 

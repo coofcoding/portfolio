@@ -1,13 +1,14 @@
 ---
+import WhoAmI from "../components/WhoAmI.astro";
 import MainInfo from "../components/MainInfo.astro";
 import Layout from "../layouts/Layout.astro";
-import Cursor from "../ui/Cursor.astro";
 ---
 
-<script src="../scripts/cursor-follower.js"></script>
 <Layout title="Kevin Lopez">
-	<Cursor />
-    <main class="text-white h-screen ml-5">
+    <main class="text-white ml-5 mb-80">
         <MainInfo/>
+    </main>
+    <main class="text-white ml-5">
+        <WhoAmI/>
     </main>
 </Layout>
