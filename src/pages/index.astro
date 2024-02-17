@@ -5,10 +5,26 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Kevin Lopez">
-    <main class="text-white ml-5 mb-80">
-        <MainInfo/>
-    </main>
-    <main class="text-white ml-5">
-        <WhoAmI/>
-    </main>
+    <div class="snap-both snap-mandatory">
+        <section class="snap-center">
+            <main class="text-white ml-5">
+                <MainInfo />
+            </main>
+        </section>
+        <section class="snap-center">
+            <main class="text-white ml-5">
+                <WhoAmI />
+            </main>
+        </section>
+    </div>
 </Layout>
+<!-- <Layout title="Kevin Lopez">
+    <div class="snap-y snap-always snap-mandatory h-screen">
+        <main class="text-white ml-5 mb-80 snap-start snap-always">
+            <MainInfo />
+        </main>
+        <main class="text-white ml-5 mb-80 snap-start snap-always">
+            <WhoAmI />
+        </main>
+    </div>
+</Layout> -->
