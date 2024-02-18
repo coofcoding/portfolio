@@ -1,16 +1,20 @@
 ---
+import Services from "../components/Services.astro";
 import WhoAmI from "../components/WhoAmI.astro";
 import MainInfo from "../components/MainInfo.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Kevin Lopez">
-    <div class="flex flex-col gap-80">
-        <main class="text-white ml-5">
+    <div class="flex flex-col gap-10 lg:gap-72 2xl:gap-[30vh]">
+        <main class="text-white xl:ml-5">
             <MainInfo />
         </main>
-        <main class="text-white ml-5">
+        <main class="text-white xl:ml-5">
             <WhoAmI />
+        </main>
+        <main class="text-white">
+            <Services />
         </main>
     </div>
 </Layout>
