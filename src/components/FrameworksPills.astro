@@ -3,17 +3,29 @@
 interface Props {
     frameworkName: string
     img: string
-    color: string
-    bgColor: String
 }
 
-const { frameworkName, img, color, bgColor } = Astro.props;
+const { frameworkName, img } = Astro.props;
+
+const frameworksValues = {
+    'Angular': 'border-[#9D334B] from-[#1F0107] to-[#1F010750]',
+    'XAMPP': 'border-[#FB7A24] from-[#1F0D00] to-[#1F0D0050]',
+    'Bootstrap': 'border-[#7952B3] from-[#110129] to-[#11012950]',
+    'MySQL': 'border-[#4479A1] from-[#001627] to-[#00162750]',
+    'django': 'border-[#136949] from-[#00150D] to-[#00150D50]',
+    'Typescript': 'border-[#3178C6] from-[#011933] to-[#01193350]',
+    'HTML': 'border-[#E34F26] from-[#360C01] to-[#360C0150]',
+    'CSS': 'border-[#1572B6] from-[#01253F] to-[#01253F50]',
+    'Python': 'border-[#FFD243] from-[#271E00] to-[#271E0050]',
+    'Ionic': 'border-[#3880FF] from-[#001335] to-[#00133550]',
+    'Deezer API': 'border-[#231F20] from-[#0E0E0E] to-[#0E0E0E50]',
+}
 
 ---
-<div class={ `bg-gradient-to-r to-transparent border border-[${color}] rounded-lg px-4 py-2 from-[${bgColor}]` }>
-    <div class="flex items-center justify-center gap-x-2">
-        <img src={ img } alt={ `logo ${frameworkName}` }>
-        <span>{ frameworkName }</span>
+<div class={ `bg-gradient-to-r to-transparent pointer-events-none border rounded-lg px-4 py-2 min-[2600px]:px-6 min-[2600px]:py-4 ${ frameworksValues[frameworkName] }` }>
+    <div class="flex items-center justify-center gap-x-2 min-[2600px]:gap-x-4">
+        <img src={ img } alt={ `logo ${frameworkName}` } class="min-[2600px]:w-8">
+        <span class="text-sm min-[2600px]:text-4xl">{ frameworkName }</span>
     </div>
 </div>
 
