@@ -1,8 +1,6 @@
-
-# Coofcoding portfolio
-
 ![just-the-basics](https://raw.githubusercontent.com/coofcoding/coofcoding/main/777shots_so.png)
 
+# Coofcoding portfolio
 This is my portfolio. It showcases some of the projects I have worked on and provides an overview of who I am, how you can contact me and the frameworks and libraries that i actually use.
 
 ## Frameworks / Libraries / Languages
