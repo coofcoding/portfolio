@@ -1,0 +1,36 @@
+---
+import ProjectDetails from "../components/ProjectDetails.astro";
+import { ProjectsDeveloped } from "../data/projects";
+---
+
+<div>
+    <h2
+        class="text-4xl
+    sm:text-5xl
+    xl:ml-5
+    md:text-6xl
+    lg:text-8xl
+    font-black
+    text-full
+    max-w-[70vw]
+    2xl:text-[12vw]
+    2xl:max-w-[70vw]
+    pointer-events-none
+    uppercase
+    mb-10"
+    >
+        PROJECTS
+    </h2>
+    <div>
+        {
+            ProjectsDeveloped.map( project =>
+                <ProjectDetails
+                    name={project.name}
+                    description={project.description}
+                    exampleImg={project.exampleImg}
+                    frameworks={project.frameworks}
+                />
+            )
+        }
+    </div>
+</div>

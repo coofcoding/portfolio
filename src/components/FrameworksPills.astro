@@ -1,0 +1,19 @@
+---
+
+interface Props {
+    frameworkName: string
+    img: string
+    color: string
+    bgColor: String
+}
+
+const { frameworkName, img, color, bgColor } = Astro.props;
+
+---
+<div class={ `bg-gradient-to-r to-transparent border border-[${color}] rounded-lg px-4 py-2 from-[${bgColor}]` }>
+    <div class="flex items-center justify-center gap-x-2">
+        <img src={ img } alt={ `logo ${frameworkName}` }>
+        <span>{ frameworkName }</span>
+    </div>
+</div>
+
