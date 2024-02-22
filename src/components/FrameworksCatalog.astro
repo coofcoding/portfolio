@@ -1,0 +1,44 @@
+---
+import BentoItem from './BentoItem.astro';
+import { frameworks } from '../data/frameworks'
+---
+<div>
+    <h2
+        class="text-4xl
+        sm:text-5xl
+        xl:ml-5
+        md:text-6xl
+        lg:text-8xl
+        font-black
+        text-full
+        max-w-[70vw]
+        2xl:text-[8vw]
+        min-[2600px]:text-[6vw]
+        2xl:max-w-[70vw]
+        pointer-events-none
+        uppercase
+        mb-10"
+    >
+        Technologies
+    </h2>
+
+    <div
+        class={`
+            w-full max-w-[1800px]
+            grid grid-cols-11 auto-rows-[8rem] lg:auto-rows-[14rem] gap-4
+            mx-auto p-20
+        `}
+    >
+
+        {
+            frameworks.map( tech => (
+                <BentoItem
+                    class={ tech.class }
+                    name={ tech.name }
+                    icon={ tech.icon }
+                />
+            ) )
+        }
+
+    </div>
+</div>

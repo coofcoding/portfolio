@@ -46,7 +46,7 @@ export const ProjectsDeveloped = [
     {
         name: "Stofyty -plus",
         description:
-            "Was developed as final project with the base of create a Spotify clone but using the Deezer API on the subject Development platforms, the design was created with fully native CSS and recognized as the BEST project between my classmates.",
+            "Was developed as final project with the base of create a Spotify clone but using the Deezer API on the Development platforms subject, the design was created with fully native CSS and recognized as the BEST project between my classmates.",
         exampleImg: "../../public/projectsPreview/stofyty.avif",
         frameworks: [
             {

@@ -1,0 +1,67 @@
+---
+interface Props {
+    class: string;
+    name: string;
+    icon: string;
+}
+
+const { name, icon } = Astro.props;
+
+const gradientTemplate = '[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,';
+const gradientEndTemplate = '_100%)]';
+
+const gradients = {
+    "HTML5":               `${gradientTemplate}#E34F26${gradientEndTemplate}`,
+    "CSS3":                `${gradientTemplate}#1572B6${gradientEndTemplate}`,
+    "FIGMA":               `${gradientTemplate}#7952B3${gradientEndTemplate}`,
+    "JAVASCRIPT":          `${gradientTemplate}#F7DF1E${gradientEndTemplate}`,
+    "VITE":                `${gradientTemplate}#646CFF${gradientEndTemplate}`,
+    "REACT REDUX TOOLKIT": `${gradientTemplate}#764ABC${gradientEndTemplate}`,
+    "REACTJS":             `${gradientTemplate}#61DAFB${gradientEndTemplate}`,
+    "PNPM":                `${gradientTemplate}#F69220${gradientEndTemplate}`,
+    "NODE.JS":             `${gradientTemplate}#339933${gradientEndTemplate}`,
+    "TAILWIND CSS":        `${gradientTemplate}#06B6D4${gradientEndTemplate}`,
+    "GIT":                 `${gradientTemplate}#F05032${gradientEndTemplate}`,
+    "VISUAL STUDIO CODE":  `${gradientTemplate}#007ACC${gradientEndTemplate}`,
+    "VISUAL STUDIO":       `${gradientTemplate}#5C2D91${gradientEndTemplate}`,
+    "GITHUB":              `${gradientTemplate}#747474${gradientEndTemplate}`,
+    "POSTMAN":             `${gradientTemplate}#FF6C37${gradientEndTemplate}`,
+}
+
+const alphaColor = 20;
+
+const borderColor = {
+    "HTML5":               `border-[#E34F26]/${alphaColor}`,
+    "CSS3":                `border-[#1572B6]/${alphaColor}`,
+    "FIGMA":               `border-[#7952B3]/${alphaColor}`,
+    "JAVASCRIPT":          `border-[#F7DF1E]/${alphaColor}`,
+    "VITE":                `border-[#646CFF]/${alphaColor}`,
+    "REACT REDUX TOOLKIT": `border-[#764ABC]/${alphaColor}`,
+    "REACTJS":             `border-[#61DAFB]/${alphaColor}`,
+    "PNPM":                `border-[#F69220]/${alphaColor}`,
+    "NODE.JS":             `border-[#339933]/${alphaColor}`,
+    "TAILWIND CSS":        `border-[#06B6D4]/${alphaColor}`,
+    "GIT":                 `border-[#F05032]/${alphaColor}`,
+    "VISUAL STUDIO CODE":  `border-[#007ACC]/${alphaColor}`,
+    "VISUAL STUDIO":       `border-[#5C2D91]/${alphaColor}`,
+    "GITHUB":              `border-[#747474]/${alphaColor}`,
+    "POSTMAN":             `border-[#FF6C37]/${alphaColor}`,
+}
+---
+
+<article
+    class={`
+    ${Astro.props.class}
+    pointer-events-none
+    relative rounded-xl
+    border ${ borderColor[name] }
+    p-10
+    flex justify-center items-center
+    shadow-lg
+    shadow-black/40
+`}
+>
+<div class={`absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 ${ gradients[name] } rounded-[10px]`}></div>
+    <img src={icon} alt={`${name} logo`} class="absolute h-5/6" />
+    <h3 class={`absolute font-black text-xl text-center xl:text-6xl ${ (name === 'REACT REDUX TOOLKIT') ? 'w-[10ch]' : ''  }`}>{name}</h3>
+</article>
