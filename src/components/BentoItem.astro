@@ -7,45 +7,40 @@ interface Props {
 
 const { name, icon } = Astro.props;
 
-const gradientTemplate = '[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,';
-const gradientEndTemplate = '_100%)]';
-
 const gradients = {
-    "HTML5":               `${gradientTemplate}#E34F26${gradientEndTemplate}`,
-    "CSS3":                `${gradientTemplate}#1572B6${gradientEndTemplate}`,
-    "FIGMA":               `${gradientTemplate}#7952B3${gradientEndTemplate}`,
-    "JAVASCRIPT":          `${gradientTemplate}#F7DF1E${gradientEndTemplate}`,
-    "VITE":                `${gradientTemplate}#646CFF${gradientEndTemplate}`,
-    "REACT REDUX TOOLKIT": `${gradientTemplate}#764ABC${gradientEndTemplate}`,
-    "REACTJS":             `${gradientTemplate}#61DAFB${gradientEndTemplate}`,
-    "PNPM":                `${gradientTemplate}#F69220${gradientEndTemplate}`,
-    "NODE.JS":             `${gradientTemplate}#339933${gradientEndTemplate}`,
-    "TAILWIND CSS":        `${gradientTemplate}#06B6D4${gradientEndTemplate}`,
-    "GIT":                 `${gradientTemplate}#F05032${gradientEndTemplate}`,
-    "VISUAL STUDIO CODE":  `${gradientTemplate}#007ACC${gradientEndTemplate}`,
-    "VISUAL STUDIO":       `${gradientTemplate}#5C2D91${gradientEndTemplate}`,
-    "GITHUB":              `${gradientTemplate}#747474${gradientEndTemplate}`,
-    "POSTMAN":             `${gradientTemplate}#FF6C37${gradientEndTemplate}`,
+    "HTML5":               `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#E34F26_100%)]`,
+    "CSS3":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#1572B6_100%)]`,
+    "FIGMA":               `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#7952B3_100%)]`,
+    "JAVASCRIPT":          `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F7DF1E_100%)]`,
+    "VITE":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#646CFF_100%)]`,
+    "REACT REDUX TOOLKIT": `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#764ABC_100%)]`,
+    "REACTJS":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#61DAFB_100%)]`,
+    "PNPM":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F69220_100%)]`,
+    "NODE.JS":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#339933_100%)]`,
+    "TAILWIND CSS":        `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#06B6D4_100%)]`,
+    "GIT":                 `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F05032_100%)]`,
+    "VISUAL STUDIO CODE":  `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#007ACC_100%)]`,
+    "VISUAL STUDIO":       `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#5C2D91_100%)]`,
+    "GITHUB":              `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#747474_100%)]`,
+    "POSTMAN":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#FF6C37_100%)]`,
 }
 
-const alphaColor = 20;
-
 const borderColor = {
-    "HTML5":               `border-[#E34F26]/${alphaColor}`,
-    "CSS3":                `border-[#1572B6]/${alphaColor}`,
-    "FIGMA":               `border-[#7952B3]/${alphaColor}`,
-    "JAVASCRIPT":          `border-[#F7DF1E]/${alphaColor}`,
-    "VITE":                `border-[#646CFF]/${alphaColor}`,
-    "REACT REDUX TOOLKIT": `border-[#764ABC]/${alphaColor}`,
-    "REACTJS":             `border-[#61DAFB]/${alphaColor}`,
-    "PNPM":                `border-[#F69220]/${alphaColor}`,
-    "NODE.JS":             `border-[#339933]/${alphaColor}`,
-    "TAILWIND CSS":        `border-[#06B6D4]/${alphaColor}`,
-    "GIT":                 `border-[#F05032]/${alphaColor}`,
-    "VISUAL STUDIO CODE":  `border-[#007ACC]/${alphaColor}`,
-    "VISUAL STUDIO":       `border-[#5C2D91]/${alphaColor}`,
-    "GITHUB":              `border-[#747474]/${alphaColor}`,
-    "POSTMAN":             `border-[#FF6C37]/${alphaColor}`,
+    "HTML5":               `border-[#E34F26]/20`,
+    "CSS3":                `border-[#1572B6]/20`,
+    "FIGMA":               `border-[#7952B3]/20`,
+    "JAVASCRIPT":          `border-[#F7DF1E]/20`,
+    "VITE":                `border-[#646CFF]/20`,
+    "REACT REDUX TOOLKIT": `border-[#764ABC]/20`,
+    "REACTJS":             `border-[#61DAFB]/20`,
+    "PNPM":                `border-[#F69220]/20`,
+    "NODE.JS":             `border-[#339933]/20`,
+    "TAILWIND CSS":        `border-[#06B6D4]/20`,
+    "GIT":                 `border-[#F05032]/20`,
+    "VISUAL STUDIO CODE":  `border-[#007ACC]/20`,
+    "VISUAL STUDIO":       `border-[#5C2D91]/20`,
+    "GITHUB":              `border-[#747474]/20`,
+    "POSTMAN":             `border-[#FF6C37]/20`,
 }
 ---
 
@@ -54,7 +49,7 @@ const borderColor = {
     ${Astro.props.class}
     pointer-events-none
     relative rounded-xl
-    border ${ borderColor[name] }
+    border-2 ${ borderColor[name] }
     p-10
     flex justify-center items-center
     shadow-lg
