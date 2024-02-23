@@ -1,77 +1,77 @@
 export const frameworks = [
     {
         name: 'HTML5',
-        icon: '../../public/technologies/html.png',
+        icon: '../../public/technologies/html.avif',
         class: "col-span-11 md:col-span-3"
     },
     {
         name: 'CSS3',
-        icon: '../../public/technologies/css.png',
+        icon: '../../public/technologies/css.avif',
         class: "col-span-11 md:col-span-3"
     },
     {
         name: 'FIGMA',
-        icon: '../../public/technologies/figma.png',
+        icon: '../../public/technologies/figma.avif',
         class: "col-span-11 md:col-span-5"
     },
     {
         name: 'JAVASCRIPT',
-        icon: '../../public/technologies/js.png',
+        icon: '../../public/technologies/js.avif',
         class: "col-span-11 md:col-span-5"
     },
     {
         name: 'VITE',
-        icon: '../../public/technologies/vite.png',
+        icon: '../../public/technologies/vite.avif',
         class: "col-span-11 md:col-span-2"
     },
     {
         name: 'REACT REDUX TOOLKIT',
-        icon: '../../public/technologies/rrt.png',
+        icon: '../../public/technologies/rrt.avif',
         class: "col-span-11 md:col-span-4 md:row-span-2"
     },
     {
         name: 'REACTJS',
-        icon: '../../public/technologies/react.png',
+        icon: '../../public/technologies/react.avif',
         class: "col-span-11 md:col-span-4"
     },
     {
         name: 'PNPM',
-        icon: '../../public/technologies/pnpm.png',
+        icon: '../../public/technologies/pnpm.avif',
         class: "col-span-11 md:col-span-3"
     },
     {
         name: 'NODE.JS',
-        icon: '../../public/technologies/nodejs.png',
+        icon: '../../public/technologies/nodejs.avif',
         class: "col-span-11 md:col-span-5"
     },
     {
         name: 'TAILWIND CSS',
-        icon: '../../public/technologies/tailwind.png',
+        icon: '../../public/technologies/tailwind.avif',
         class: "col-span-11 md:col-span-6"
     },
     {
         name: 'GIT',
-        icon: '../../public/technologies/git.png',
+        icon: '../../public/technologies/git.avif',
         class: "col-span-11 md:col-span-4 md:row-span-2"
     },
     {
         name: 'VISUAL STUDIO CODE',
-        icon: '../../public/technologies/vscode.png',
+        icon: '../../public/technologies/vscode.avif',
         class: "col-span-11 md:col-span-7"
     },
     {
         name: 'VISUAL STUDIO',
-        icon: '../../public/technologies/vs.png',
+        icon: '../../public/technologies/vs.avif',
         class: "col-span-11 md:col-span-7"
     },
     {
         name: 'GITHUB',
-        icon: '../../public/technologies/github.png',
+        icon: '../../public/technologies/github.avif',
         class: "col-span-11 md:col-span-6"
     },
     {
         name: 'POSTMAN',
-        icon: '../../public/technologies/postman.png',
+        icon: '../../public/technologies/postman.avif',
         class: "col-span-11 md:col-span-5"
     },
 ]
