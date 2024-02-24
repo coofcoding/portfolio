@@ -17,6 +17,9 @@ dependencies:
   astro:
     specifier: ^4.3.5
     version: 4.3.5
+  rolly.js:
+    specifier: ^0.4.0
+    version: 0.4.0
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -1031,6 +1034,10 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /bindall-standalone@1.0.5:
+    resolution: {integrity: sha512-HDI7YBWXVJk/eoGz+e4lYQQJnYp1ZHcUvAY71lVptLMhQnDm86vD73AGPw2qIlgYR3P0bjmoAcXiA8qhFejBhA==}
+    dev: false
+
   /bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
     requiresBuild: true
@@ -1975,6 +1982,10 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
+  /lethargy@1.0.9:
+    resolution: {integrity: sha512-nFM8blpCF9rqIL5mRAaTGc78W8oQixVtsD86jbEPvcI13+lDUYJf3R7DZQQL7tCiBpbGpGKMX2gwJFO9hiaOkg==}
+    dev: false
+
   /lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
@@ -2876,6 +2887,10 @@ packages:
       which-pm: 2.0.0
     dev: false
 
+  /prefix@1.0.0:
+    resolution: {integrity: sha512-KtGt8TV4nQkYgO6wJ5phkBGAECZW5cs5vQhqnz1LlxGGd8y4LwpW3Bq5pofULjdiMXACDCxisDUhwtFXb7vHfQ==}
+    dev: false
+
   /prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -3118,6 +3133,13 @@ packages:
       '@rollup/rollup-win32-ia32-msvc': 4.10.0
       '@rollup/rollup-win32-x64-msvc': 4.10.0
       fsevents: 2.3.3
+    dev: false
+
+  /rolly.js@0.4.0:
+    resolution: {integrity: sha512-E/pp/plGoXVYjifBJ8AiCvY3PGsO0fEQwbxH53K+o4vo2kb3EjROil0qDtATfydBjFRA647vAX+la7pnmLtH6w==}
+    dependencies:
+      prefix: 1.0.0
+      virtual-scroll: 1.5.2
     dev: false
 
   /run-parallel@1.2.0:
@@ -3478,6 +3500,10 @@ packages:
       any-promise: 1.3.0
     dev: false
 
+  /tiny-emitter@1.2.0:
+    resolution: {integrity: sha512-rWjF00inHeWtT5UbQYAXoMI4hL6TRMqohuKCsODyPYYmfAxqfMnXLsIeNrbdPEkNxlk++rojVilTnI9IVmEBtA==}
+    dev: false
+
   /to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
@@ -3678,6 +3704,15 @@ packages:
       '@types/unist': 3.0.2
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
+    dev: false
+
+  /virtual-scroll@1.5.2:
+    resolution: {integrity: sha512-7jDHwlKbHUho7CYU/HojE/VKFH8GV9P5fVWP2HCa7dRUOpVvwl93OBOKIIcb2mKd+vqsbVR/0zl0X70+3sUZqA==}
+    dependencies:
+      bindall-standalone: 1.0.5
+      lethargy: 1.0.9
+      object-assign: 4.1.1
+      tiny-emitter: 1.2.0
     dev: false
 
   /vite@5.1.1:

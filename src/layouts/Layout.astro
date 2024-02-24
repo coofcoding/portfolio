@@ -8,9 +8,11 @@ import "@fontsource/lato/400.css";
 import "@fontsource/lato/700.css";
 import "@fontsource/lato/900.css";
 import Cursor from "../ui/Cursor.astro";
+import "../../node_modules/rolly.js/css/style.css";
+
 
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -18,60 +20,75 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="Welcome, this is my personal portfolio where you'll can see some of the projects that i made, the technologies with i frecuently work and some technologies that i didn't still use today."
-		/>
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Cursor />
-		<slot />
-		<script src="../scripts/cursor-follower.js"></script>
-	</body><!-- GLOBAL STYLES -->
-	<style is:global>
-		:root {
-		}
-		::-webkit-scrollbar {
-			display: none;
-		}
-		html {
-			cursor: none;
-			font-family: "Lato", sans-serif;
-			background: #000000;
-			scroll-behavior: smooth;
-		}
-		body {
-			overflow-x: hidden;
-			-ms-overflow-style: none; /* IE and Edge */
-			scrollbar-width: none; /* Firefox */
-			background-image: url("./public/bg&effects/noisee.avif");
-		}
-		::-moz-selection {
-			/* Code for Firefox */
-			color: rgb(36, 36, 36);
-			background: rgb(0, 0, 0);
-		}
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Welcome, this is my personal portfolio where you'll can see some of the projects that i made, the technologies with i frecuently work and some technologies that i didn't still use today."
+        />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <script>
+            import rolly from "rolly.js";
 
-		::selection {
-			color: rgb(36, 36, 36);
-			background: rgb(0, 0, 0);
-		}
-		#_animationIcon {
-			animation: iconAnimate 1s ease-in-out alternate 12;
-		}
-		@keyframes iconAnimate {
-			from {
-				transform: translateY(-3px);
-			}
-			to {
-				transform: translateY(3px);
-			}
-		}
-	</style>
+            const r = rolly({
+                view: document.querySelector(".app"),
+                native: true,
+                // other options
+            });
+            r.init();
+        </script>
+		<div class="app">
+			<Cursor />
+			<div data-scene>
+				<slot/>
+			</div>
+		</div>
+
+        <script src="../scripts/cursor-follower.js"></script>
+    </body><!-- GLOBAL STYLES -->
+    <style is:global>
+        :root {
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        html {
+            cursor: none;
+            font-family: "Lato", sans-serif;
+            background: #000000;
+            scroll-behavior: smooth;
+        }
+        body {
+            overflow-x: hidden;
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+            background-image: url("./public/bg&effects/noisee.avif");
+        }
+        ::-moz-selection {
+            /* Code for Firefox */
+            color: rgb(36, 36, 36);
+            background: rgb(0, 0, 0);
+        }
+
+        ::selection {
+            color: rgb(36, 36, 36);
+            background: rgb(0, 0, 0);
+        }
+        #_animationIcon {
+            animation: iconAnimate 1s ease-in-out alternate 12;
+        }
+        @keyframes iconAnimate {
+            from {
+                transform: translateY(-3px);
+            }
+            to {
+                transform: translateY(3px);
+            }
+        }
+    </style>
 </html>
