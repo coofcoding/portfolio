@@ -1,77 +1,77 @@
 export const frameworks = [
     {
         name: 'HTML5',
-        icon: '../../public/technologies/html.avif',
+        icon: './technologies/html.avif',
         class: "col-span-11 lg:col-span-3"
     },
     {
         name: 'CSS3',
-        icon: '../../public/technologies/css.avif',
+        icon: './technologies/css.avif',
         class: "col-span-11 lg:col-span-3"
     },
     {
         name: 'FIGMA',
-        icon: '../../public/technologies/figma.avif',
+        icon: './technologies/figma.avif',
         class: "col-span-11 lg:col-span-5"
     },
     {
         name: 'JAVASCRIPT',
-        icon: '../../public/technologies/js.avif',
+        icon: './technologies/js.avif',
         class: "col-span-11 lg:col-span-5"
     },
     {
         name: 'VITE',
-        icon: '../../public/technologies/vite.avif',
+        icon: './technologies/vite.avif',
         class: "col-span-11 lg:col-span-2"
     },
     {
         name: 'REACT REDUX TOOLKIT',
-        icon: '../../public/technologies/rrt.avif',
+        icon: './technologies/rrt.avif',
         class: "col-span-11 lg:col-span-4 lg:row-span-2"
     },
     {
         name: 'REACTJS',
-        icon: '../../public/technologies/react.avif',
+        icon: './technologies/react.avif',
         class: "col-span-11 lg:col-span-4"
     },
     {
         name: 'PNPM',
-        icon: '../../public/technologies/pnpm.avif',
+        icon: './technologies/pnpm.avif',
         class: "col-span-11 lg:col-span-3"
     },
     {
         name: 'NODE.JS',
-        icon: '../../public/technologies/nodejs.avif',
+        icon: './technologies/nodejs.avif',
         class: "col-span-11 lg:col-span-5"
     },
     {
         name: 'TAILWIND CSS',
-        icon: '../../public/technologies/tailwind.avif',
+        icon: './technologies/tailwind.avif',
         class: "col-span-11 lg:col-span-6"
     },
     {
         name: 'GIT',
-        icon: '../../public/technologies/git.avif',
+        icon: './technologies/git.avif',
         class: "col-span-11 lg:col-span-4 lg:row-span-2"
     },
     {
         name: 'VISUAL STUDIO CODE',
-        icon: '../../public/technologies/vscode.avif',
+        icon: './technologies/vscode.avif',
         class: "col-span-11 lg:col-span-7"
     },
     {
         name: 'VISUAL STUDIO',
-        icon: '../../public/technologies/vs.avif',
+        icon: './technologies/vs.avif',
         class: "col-span-11 lg:col-span-7"
     },
     {
         name: 'GITHUB',
-        icon: '../../public/technologies/github.avif',
+        icon: './technologies/github.avif',
         class: "col-span-11 lg:col-span-6"
     },
     {
         name: 'POSTMAN',
-        icon: '../../public/technologies/postman.avif',
+        icon: './technologies/postman.avif',
         class: "col-span-11 lg:col-span-5"
     },
 ]
