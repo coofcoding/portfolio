@@ -9,7 +9,7 @@ import "@fontsource/lato/700.css";
 import "@fontsource/lato/900.css";
 import Cursor from "../ui/Cursor.astro";
 import "../../node_modules/rolly.js/css/style.css";
-
+import DownArrow from "../../public/DownArrow.astro";
 
 interface Props {
     title: string;
@@ -38,16 +38,21 @@ const { title } = Astro.props;
             const r = rolly({
                 view: document.querySelector(".app"),
                 native: true,
-                // other options
             });
             r.init();
         </script>
-		<div class="app">
-			<Cursor />
-			<div data-scene>
-				<slot/>
-			</div>
-		</div>
+        <span
+            class="absolute bottom-0 left-[50%] translate-x-[-50%] text-[2vw] font-bold text-white/80 flex items-center gap-2 _scroll-txt-animation pointer-events-none"
+        >
+            <DownArrow />
+            scroll and discover
+        </span>
+        <div class="app">
+            <Cursor />
+            <div data-scene>
+                <slot />
+            </div>
+        </div>
 
         <script src="../scripts/cursor-follower.js"></script>
     </body><!-- GLOBAL STYLES -->
@@ -63,11 +68,13 @@ const { title } = Astro.props;
             background: #000000;
             scroll-behavior: smooth;
         }
+        [data-scene] {
+            background-image: url("./public/bg&effects/noisee.avif");
+        }
         body {
             overflow-x: hidden;
             -ms-overflow-style: none; /* IE and Edge */
             scrollbar-width: none; /* Firefox */
-            background-image: url("./public/bg&effects/noisee.avif");
         }
         ::-moz-selection {
             /* Code for Firefox */
@@ -88,6 +95,35 @@ const { title } = Astro.props;
             }
             to {
                 transform: translateY(3px);
+            }
+        }
+        ._scroll-txt-animation {
+            animation:
+                scrollAnimate 3s 2s ease-in-out both,
+                scrollAnimteHide 1s 8s ease-in-out forwards;
+        }
+
+        @keyframes scrollAnimteHide {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                display: none;
+            }
+        }
+
+        @keyframes scrollAnimate {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
             }
         }
     </style>

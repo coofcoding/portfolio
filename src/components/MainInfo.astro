@@ -1,6 +1,4 @@
 ---
-import RubikCubeIcon from "./RubikCubeIcon.astro";
-import DownArrow from "../../public/DownArrow.astro";
 ---
 
 <script>
@@ -10,19 +8,6 @@ import DownArrow from "../../public/DownArrow.astro";
 </script>
 <div>
     <div>
-        <RubikCubeIcon />
-    </div>
-    <span
-        class="absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[-50%] text-[2vw] font-bold text-white/80 flex items-center gap-2 _scroll-txt-animation pointer-events-none"
-    >
-        <DownArrow />
-        scroll and discover
-    </span>
-    <div>
-        <span
-            class="text-end -translate-x-10 leading-[100%] -z-[1] text-[#00000060] mix-blend-darken uppercase absolute flex items-center justify-end font-black text-[30vw] h-full break-all w-full"
-            >Developer</span
-        >
         <h1
             class="font-black text-[9.5vw] leading-none max-w-screen flex flex-col h-screen justify-center pointer-events-none _main-content"
         >
@@ -49,38 +34,8 @@ import DownArrow from "../../public/DownArrow.astro";
         -webkit-text-stroke: 1px #747474;
     }
 
-    ._scroll-txt-animation {
-        animation:
-            scrollAnimate 3s 2s ease-in-out both,
-            scrollAnimteHide 1s 8s ease-in-out forwards;
-    }
-
     ._main-content {
         animation: loadingAnimate 3s ease-in-out;
-    }
-
-    @keyframes scrollAnimteHide {
-        from {
-            opacity: 1;
-        }
-        to {
-            opacity: 0;
-            display: none;
-        }
-    }
-
-    @keyframes scrollAnimate {
-        0% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
     }
 
     @keyframes loadingAnimate {

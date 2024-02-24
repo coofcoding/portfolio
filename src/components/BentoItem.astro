@@ -8,21 +8,21 @@ interface Props {
 const { name, icon } = Astro.props;
 
 const gradients = {
-    "HTML5":               `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#E34F26_100%)]`,
-    "CSS3":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#1572B6_100%)]`,
-    "FIGMA":               `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#7952B3_100%)]`,
-    "JAVASCRIPT":          `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F7DF1E_100%)]`,
-    "VITE":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#646CFF_100%)]`,
-    "REACT REDUX TOOLKIT": `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#764ABC_100%)]`,
-    "REACTJS":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#61DAFB_100%)]`,
-    "PNPM":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F69220_100%)]`,
-    "NODE.JS":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#339933_100%)]`,
-    "TAILWIND CSS":        `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#06B6D4_100%)]`,
-    "GIT":                 `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F05032_100%)]`,
-    "VISUAL STUDIO CODE":  `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#007ACC_100%)]`,
-    "VISUAL STUDIO":       `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#5C2D91_100%)]`,
-    "GITHUB":              `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#747474_100%)]`,
-    "POSTMAN":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#FF6C37_100%)]`,
+    "HTML5":               `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#E34F2685_100%)]`,
+    "CSS3":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#1572B685_100%)]`,
+    "FIGMA":               `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#7952B385_100%)]`,
+    "JAVASCRIPT":          `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F7DF1E85_100%)]`,
+    "VITE":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#646CFF85_100%)]`,
+    "REACT REDUX TOOLKIT": `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#764ABC85_100%)]`,
+    "REACTJS":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#61DAFB85_100%)]`,
+    "PNPM":                `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F6922085_100%)]`,
+    "NODE.JS":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#33993385_100%)]`,
+    "TAILWIND CSS":        `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#06B6D485_100%)]`,
+    "GIT":                 `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#F0503285_100%)]`,
+    "VISUAL STUDIO CODE":  `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#007ACC85_100%)]`,
+    "VISUAL STUDIO":       `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#5C2D9185_100%)]`,
+    "GITHUB":              `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#74747485_100%)]`,
+    "POSTMAN":             `[background:radial-gradient(125%_125%_at_50%_10%,#00000095_40%,#FF6C3785_100%)]`,
 }
 
 const borderColor = {
@@ -57,6 +57,6 @@ const borderColor = {
 `}
 >
 <div class={`absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 ${ gradients[name] } rounded-[10px]`}></div>
-    <img src={icon} alt={`${name} logo`} class="absolute h-5/6" />
+    <img src={icon} alt={`${name} logo`} class="absolute h-5/6 opacity-60" />
     <h3 class={`absolute font-black text-xl text-center xl:text-6xl ${ (name === 'REACT REDUX TOOLKIT') ? 'w-[10ch]' : ''  }`}>{name}</h3>
 </article>
