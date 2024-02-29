@@ -3,6 +3,7 @@ const _gmailHover = document.getElementById("_gmailHover");
 const _linkedinHover = document.getElementById("_linkedinHover");
 const _githubHover = document.getElementById("_githubHover");
 const _igHover = document.getElementById("_igHover");
+const _leetHover = document.getElementById("_leetHover");
 
 _twitterHover.addEventListener("mouseover", () => {
     
@@ -90,6 +91,26 @@ _igHover.addEventListener("mouseover", () => {
 })
 
 _igHover.addEventListener("mouseleave", () => {
+    
+    const _pointerTexture = document.getElementById("_pointerTexture");
+
+    _pointerTexture.classList.remove('w-36', 'h-36', 'bg-white', 'mix-blend-difference');
+    _pointerTexture.classList.add('backdrop-blur-md');
+
+
+})
+
+_leetHover.addEventListener("mouseover", () => {
+    
+    const _pointerTexture = document.getElementById("_pointerTexture");
+
+    _pointerTexture.classList.add('w-36', 'h-36', 'bg-white', 'mix-blend-difference');
+    _pointerTexture.classList.remove('backdrop-blur-md');
+
+
+})
+
+_leetHover.addEventListener("mouseleave", () => {
     
     const _pointerTexture = document.getElementById("_pointerTexture");
 
